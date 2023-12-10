@@ -1,97 +1,98 @@
-import { create, md, html } from 'presenter';
+import 'highlight.js/styles/github.css';
 import 'tachyons/css/tachyons.css';
 import 'presenter/dist/index.css';
 import './css/style.css';
-
-const title = {
-  template: 'title',
-  title: `Introduction au TDD et au principe de clean-archi avec Pyspark`,
-  content: md`
-### Bonnes pratiques et datascience
-
-Fati Chen <small>🔗[LinkedIn](https://www.linkedin.com/in/fati-chen/) | 📚[github.com/stardisblue](https://github.com/stardisblue)</small>
-
-> _Dr. en Datascience & Dataviz_
->
-> Data scientist & dev. Fullstack @[Comwatt](https://www.comwatt.com/)
-
-_12 déc. 2023_
-  `,
-};
-
-const titlebold = {
-  template: 'title',
-  title: html.fragment`
-    <span style="opacity:0.5">Introduction au </span>TDD<span
-      style="opacity:0.5"
-    >
-      et au principe de </span
-    >clean-archi<span style="opacity:0.5"> avec </span>Pyspark<span
-      style="opacity:0.5"
-    ></span>
-  `,
-  content: md`
-<div style="opacity:0.5">
-
-### Bonnes pratiques et datascience
-
-Fati Chen <small>🔗[LinkedIn](https://www.linkedin.com/in/fati-chen/) | 📚[github.com/stardisblue](https://github.com/stardisblue)</small>
-
-> _Dr. en Datascience & Dataviz_
->
-> Data scientist & dev. Fullstack @[Comwatt](https://www.comwatt.com/)
-
-_12 déc. 2023_
-  `,
-};
+import { create, html, md } from 'presenter';
+import { title, titlebold } from './pages/title';
+import { tdd, tddExamples } from './pages/tdd';
+import { cleanArchi } from './pages/cleanArchi';
+import { pyspark } from './pages/pyspark';
+import exemplesVideo from './castello-oui-exemples.mp4';
+import { comwatt } from './pages/comwatt';
 
 (function () {
   const $entry = document.querySelector<HTMLElement>('#hero')!;
   create($entry, [
-    title,
-    titlebold,
+    // title,
+    // titlebold,
+    // tdd,
+    // ...tddExamples,
+    // ...cleanArchi,
+    // {
+    //   template: 'title',
+    //   title: `TDD 💖 Clean Archi`,
+    // },
+    // pyspark,
+    // comwatt,
+    // {
+    //   template: 'title',
+    //   title: `TDD, Archi Hexagonale, PySpark, Comwatt ...`,
+    //   content: `C'est bien tout ça, mais j'en fais quoi ?`,
+    // },
+    // {
+    //   template: 'title',
+    //   title: ``,
+    //   content: html`<figure class="flex flex-column items-center">
+    //     <video
+    //       src=${exemplesVideo}
+    //       class="w-60 h-60"
+    //       autoplay
+    //       loop
+    //       controls
+    //     ></video>
+    //     <figcaption class="f4">
+    //       <a href="https://www.youtube.com/watch?v=cKuxIOKagFs">youtube</a> :
+    //       Suisse?" - C'est quoi l'accent suisse ?
+    //     </figcaption>
+    //   </figure>`,
+    // },
     {
-      title: `De quoi va-t-on parler ?`,
-      content: md`
-- Présentation du tdd
-- Présentation de la clean-archi
-- Présentation de pyspark
-      `,
-    },
-    {
-      title: `De quoi va-t-on parler ?`,
-      content: md`
-tdd
-      `,
-    },
-    {
-      title: `De quoi va-t-on parler ?`,
-      content: md`
-clean-archi
-      `,
-    },
-    {
-      title: `De quoi va-t-on parler ?`,
-      content: md`
-pyspark
-      `,
-    },
-    {
-      title: `Ouii des exemples ?`,
-      content: md`
-https://youtu.be/cKuxIOKagFs?feature=shared&t=187
-      `,
-    },
-    {
-      title: `La datascience dans Comwatt`,
-      content: md`
-objets connectés et valorisation des données dans cassandra
-      `,
-    },
-    {
-      title: `La datascience dans Comwatt`,
-      content: md`
-Base postgres et base cassandra
+      title: `Posons d'abord notre problématique`,
+      content: html`
+        <p class="measure">
+          <strong>Objectif</strong> : récupérer pour un jour donné l'ensemble
+          des données pour tous les appareils.
+        </p>
+
+        <div class="flex items-baseline">
+          <div class="w-80">
+            <p class="measure">
+              <strong>Cassandra</strong> : consommation et de production des
+              appareils.
+            </p>
+          </div>
+
+          <div class="pa2"></div>
+          <div class="w-100">
+            <pre class="w-100 code">
+cass.measures(
+  <em>user_id</em>,
+  <em>bucket_month</em>,
+  <em>device_uid</em>,
+  <em>timestamp</em>,
+  value
+)</pre
+            >
+          </div>
+        </div>
+        <div class="flex items-baseline">
+          <div class="w-80">
+            <p class="measure">
+              <strong>Postgres</strong>: informations des appareils
+            </p>
+          </div>
+          <div class="pa2"></div>
+          <div class="w-100 code">
+            <pre class="w-100 code">
+pg.devices(
+    <em>device_uid</em>,
+    user_id,
+    type,
+    label
+)</pre
+            >
+          </div>
+        </div>
       `,
     },
     {
