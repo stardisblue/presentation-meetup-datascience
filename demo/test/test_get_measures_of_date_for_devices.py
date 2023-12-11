@@ -1,4 +1,5 @@
 from operator import methodcaller
+from typing import Iterable
 import pytest
 
 from pyspark.sql import SparkSession, DataFrame
@@ -20,8 +21,10 @@ def serialize_dataframe(df: DataFrame):
     return list(map(methodcaller("asDict", recursive=True), df.collect()))
 
 
-def assertDataFrameEqual(actual: DataFrame, expected: DataFrame):
-    assert serialize_dataframe(actual) == serialize_dataframe(expected)
+def assertDataFrameEqual(actual: DataFrame, expected: DataFrame, order: Iterable[str]):
+    assert serialize_dataframe(actual.orderBy(*order)) == serialize_dataframe(
+        expected.orderBy(*order)
+    )
 
 
 def test_get_measures_of_date(spark):
@@ -37,5 +40,7 @@ def test_get_measures_of_date(spark):
     device_measures(get_measures_of_date_for_devices(datestamp, devices, measures))
 
     validation = spark.read.csv("data/validation.csv", header=True)
-    device_measures.dataframe.explain()
-    assertDataFrameEqual(device_measures.dataframe, validation)
+    
+    assertDataFrameEqual(
+        device_measures.dataframe, validation, order=["device_uid", "timestamp"]
+    )

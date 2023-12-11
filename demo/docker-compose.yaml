@@ -1,0 +1,16 @@
+version: '3.9'
+
+networks:
+  cassandra:
+services:
+  cassandra:
+    image: bitnami/cassandra:latest
+    networks:
+      - cassandra
+    ports:
+      - "9042:9042"
+    volumes:
+      - ./data/cassandra:/var/lib/cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cassandra
+      - CASSANDRA_RPC_ADDRESS=cassandra

@@ -1,7 +1,6 @@
-from demo.services.reader import Reader
-
-
 from pyspark.sql import DataFrame, SparkSession
+
+from demo.services.reader import Reader
 
 
 class LocalCsvReader(Reader):

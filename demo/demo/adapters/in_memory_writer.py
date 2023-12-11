@@ -1,4 +1,5 @@
 from pyspark.sql import DataFrame
+
 from demo.services.writer import Writer
 
 
@@ -9,6 +10,7 @@ class InMemoryWriter(Writer):
 
     @property
     def dataframe(self):
+        assert self._dataframe is not None
         return self._dataframe
 
     def __call__(self, df: DataFrame) -> None:

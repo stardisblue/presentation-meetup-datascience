@@ -1,73 +1,73 @@
 site_id,connected_object_uid,device_uid,type,label,bucket_month,timestamp,value
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 00:00:00,94.53281861784173
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 01:00:00,119.2532213120584
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 02:00:00,93.70437674249217
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 03:00:00,106.84690546277335
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 04:00:00,94.90151245419372
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 05:00:00,115.13999041719663
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 06:00:00,89.18750068283052
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 07:00:00,106.15052035049965
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 08:00:00,123.67249153022091
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 09:00:00,103.017877329773
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 10:00:00,107.50579438352437
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 11:00:00,95.86017509111755
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 12:00:00,108.52951917508484
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 13:00:00,104.07514327706585
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 14:00:00,93.30114404199082
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 15:00:00,106.04815849946567
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 16:00:00,103.00401880187846
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 17:00:00,103.1317136488653
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 18:00:00,96.3644553988263
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 19:00:00,96.67745832769293
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 20:00:00,86.07031355422605
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 21:00:00,85.77224198290585
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 22:00:00,102.26159878750701
-36,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 23:00:00,93.01135259213687
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 00:00:00,108.60684290390547
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 01:00:00,102.7961803979469
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 02:00:00,115.520866397698
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 03:00:00,110.47293105605954
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 04:00:00,100.79725191086396
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 05:00:00,76.70613805919773
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 06:00:00,79.35519045243336
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 07:00:00,114.5749987011344
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 08:00:00,112.2630433149384
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 09:00:00,98.71573532442919
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 10:00:00,107.55343252952377
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 11:00:00,105.29154184468837
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 12:00:00,112.34979786707851
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 13:00:00,104.06386600519357
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 14:00:00,91.41308941153369
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 15:00:00,93.41953305842512
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 16:00:00,95.2446177584481
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 17:00:00,95.75822738732174
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 18:00:00,110.8806338642902
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 19:00:00,91.61671878140817
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 20:00:00,108.77442065412981
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 21:00:00,123.56678178453333
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 22:00:00,95.88386131884046
-36,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 23:00:00,106.82684997301558
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 00:00:00,107.16340446868195
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 01:00:00,89.3507238780725
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 02:00:00,81.30636352280118
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 03:00:00,90.70208844539914
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 04:00:00,90.4100820552852
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 05:00:00,103.7051929082328
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 06:00:00,97.43132191303008
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 07:00:00,108.77084223574123
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 08:00:00,104.24056367059309
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 09:00:00,101.90822263250075
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 10:00:00,99.23570380685274
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 11:00:00,101.70593393135803
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 12:00:00,115.10766650628311
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 13:00:00,104.67440725674732
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 14:00:00,100.08533732689548
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 15:00:00,123.8802918592913
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 16:00:00,106.41188959481478
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 17:00:00,102.39404715590848
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 18:00:00,79.42746735582907
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 19:00:00,119.85234969808153
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 20:00:00,95.13674485550848
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 21:00:00,100.6409648032667
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 22:00:00,105.21449813749129
-36,ccccc,2,four,"pour faire du pain",202309,2023-09-11 23:00:00,122.96752723806321
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 00:00:00,94.53281861784173
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 01:00:00,119.2532213120584
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 02:00:00,93.70437674249217
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 03:00:00,106.84690546277335
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 04:00:00,94.90151245419372
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 05:00:00,115.13999041719663
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 06:00:00,89.18750068283052
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 07:00:00,106.15052035049965
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 08:00:00,123.67249153022091
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 09:00:00,103.017877329773
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 10:00:00,107.50579438352437
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 11:00:00,95.86017509111755
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 12:00:00,108.52951917508484
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 13:00:00,104.07514327706585
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 14:00:00,93.30114404199082
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 15:00:00,106.04815849946567
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 16:00:00,103.00401880187846
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 17:00:00,103.1317136488653
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 18:00:00,96.3644553988263
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 19:00:00,96.67745832769293
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 20:00:00,86.07031355422605
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 21:00:00,85.77224198290585
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 22:00:00,102.26159878750701
+0,aaaaa,0,chauffage,"Mon chauffage maison",202309,2023-09-11 23:00:00,93.01135259213687
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 00:00:00,108.60684290390547
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 01:00:00,102.7961803979469
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 02:00:00,115.520866397698
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 03:00:00,110.47293105605954
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 04:00:00,100.79725191086396
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 05:00:00,76.70613805919773
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 06:00:00,79.35519045243336
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 07:00:00,114.5749987011344
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 08:00:00,112.2630433149384
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 09:00:00,98.71573532442919
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 10:00:00,107.55343252952377
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 11:00:00,105.29154184468837
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 12:00:00,112.34979786707851
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 13:00:00,104.06386600519357
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 14:00:00,91.41308941153369
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 15:00:00,93.41953305842512
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 16:00:00,95.2446177584481
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 17:00:00,95.75822738732174
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 18:00:00,110.8806338642902
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 19:00:00,91.61671878140817
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 20:00:00,108.77442065412981
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 21:00:00,123.56678178453333
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 22:00:00,95.88386131884046
+1,bbbbb,1,chauffage,"Le chauffage c'est la vie",202309,2023-09-11 23:00:00,106.82684997301558
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 00:00:00,107.16340446868195
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 01:00:00,89.3507238780725
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 02:00:00,81.30636352280118
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 03:00:00,90.70208844539914
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 04:00:00,90.4100820552852
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 05:00:00,103.7051929082328
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 06:00:00,97.43132191303008
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 07:00:00,108.77084223574123
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 08:00:00,104.24056367059309
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 09:00:00,101.90822263250075
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 10:00:00,99.23570380685274
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 11:00:00,101.70593393135803
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 12:00:00,115.10766650628311
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 13:00:00,104.67440725674732
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 14:00:00,100.08533732689548
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 15:00:00,123.8802918592913
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 16:00:00,106.41188959481478
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 17:00:00,102.39404715590848
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 18:00:00,79.42746735582907
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 19:00:00,119.85234969808153
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 20:00:00,95.13674485550848
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 21:00:00,100.6409648032667
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 22:00:00,105.21449813749129
+2,ccccc,2,four,"pour faire du pain",202309,2023-09-11 23:00:00,122.96752723806321
