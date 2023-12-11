@@ -4,7 +4,7 @@ networks:
   cassandra:
 services:
   cassandra:
-    image: bitnami/cassandra:latest
+    image: cassandra:latest
     networks:
       - cassandra
     ports:
@@ -13,4 +13,15 @@ services:
       - ./data/cassandra:/var/lib/cassandra
     environment:
       - CASSANDRA_CLUSTER_NAME=cassandra
-      - CASSANDRA_RPC_ADDRESS=cassandra
+      - CASSANDRA_LISTEN_ADDRESS=localhost
+  postgresql:
+    image: postgres:latest
+    networks:
+      - cassandra
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=demo_password
+      - PGDATA=/var/lib/postgresql/data/pgdata
