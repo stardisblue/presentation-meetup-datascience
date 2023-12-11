@@ -68,7 +68,7 @@ import { comwatt } from './pages/comwatt';
 cass.measures(
   <em>user_id</em>,
   <em>bucket_month</em>,
-  <em>device_uid</em>,
+  <em>connected_object_uid</em>,
   <em>timestamp</em>,
   value
 )</pre
@@ -85,7 +85,8 @@ cass.measures(
           <div class="w-100 code">
             <pre class="w-100 code">
 pg.devices(
-    <em>device_uid</em>,
+    <em>device_id</em>,
+    <em>connected_object_uid</em>,
     user_id,
     type,
     label
