@@ -9,43 +9,54 @@ import { cleanArchi } from './pages/cleanArchi';
 import { pyspark } from './pages/pyspark';
 import exemplesVideo from './castello-oui-exemples.mp4';
 import { comwatt } from './pages/comwatt';
+import comwattUrl from "./comwatt.jpg"
+import bigdataUrl from "./bigdata.webp"
+import flintUrl from "./flint_company_logo.jpg"
+import slbUrl from "./slbdigital_logo.jpg"
+
+const logos = [
+  {src: bigdataUrl, url:"https://www.meetup.com/big-data-science-montpellier/"},
+  {src: flintUrl, url:"https://www.flint.sh/"},
+  {src: slbUrl, url:"https://www.slb.com"},
+  {src: comwattUrl, url:"https://comwatt.com"},
+];
 
 (function () {
   const $entry = document.querySelector<HTMLElement>('#hero')!;
   create($entry, [
-    // title,
-    // titlebold,
-    // tdd,
-    // ...tddExamples,
-    // ...cleanArchi,
-    // {
-    //   template: 'title',
-    //   title: `TDD 💖 Clean Archi`,
-    // },
-    // pyspark,
-    // comwatt,
-    // {
-    //   template: 'title',
-    //   title: `TDD, Archi Hexagonale, PySpark, Comwatt ...`,
-    //   content: `C'est bien tout ça, mais j'en fais quoi ?`,
-    // },
-    // {
-    //   template: 'title',
-    //   title: ``,
-    //   content: html`<figure class="flex flex-column items-center">
-    //     <video
-    //       src=${exemplesVideo}
-    //       class="w-60 h-60"
-    //       autoplay
-    //       loop
-    //       controls
-    //     ></video>
-    //     <figcaption class="f4">
-    //       <a href="https://www.youtube.com/watch?v=cKuxIOKagFs">youtube</a> :
-    //       Suisse?" - C'est quoi l'accent suisse ?
-    //     </figcaption>
-    //   </figure>`,
-    // },
+    title,
+    titlebold,
+    tdd,
+    ...tddExamples,
+    ...cleanArchi,
+    {
+      template: 'title',
+      title: `TDD 💖 Clean Archi`,
+    },
+    pyspark,
+    comwatt,
+    {
+      template: 'title',
+      title: `TDD, Archi Hexagonale, PySpark, Comwatt ...`,
+      content: `C'est bien tout ça, mais j'en fais quoi ?`,
+    },
+    {
+      template: 'title',
+      title: ``,
+      content: html`<figure class="flex flex-column items-center">
+        <video
+          src=${exemplesVideo}
+          class="w-60 h-60"
+          autoplay
+          loop
+          controls
+        ></video>
+        <figcaption class="f4">
+          <a href="https://www.youtube.com/watch?v=cKuxIOKagFs">youtube</a> :
+          Suisse?" - C'est quoi l'accent suisse ?
+        </figcaption>
+      </figure>`,
+    },
     {
       title: `Posons d'abord notre problématique`,
       content: html`
@@ -56,10 +67,8 @@ import { comwatt } from './pages/comwatt';
 
         <div class="flex items-baseline">
           <div class="w-80">
-            <p class="measure">
-              <strong>Cassandra</strong> : consommation et de production des
-              appareils.
-            </p>
+            <strong>Cassandra</strong> : consommation et production des
+            appareils.
           </div>
 
           <div class="pa2"></div>
@@ -67,7 +76,7 @@ import { comwatt } from './pages/comwatt';
             <pre class="w-100 code">
 cass.measures(
   <em>user_id</em>,
-  <em>bucket_month</em>,
+  <em>time_bucket</em>,
   <em>connected_object_uid</em>,
   <em>timestamp</em>,
   value
@@ -77,16 +86,14 @@ cass.measures(
         </div>
         <div class="flex items-baseline">
           <div class="w-80">
-            <p class="measure">
-              <strong>Postgres</strong>: informations des appareils
-            </p>
+            <strong>Postgres</strong>: informations des appareils
           </div>
           <div class="pa2"></div>
           <div class="w-100 code">
             <pre class="w-100 code">
 pg.devices(
-    <em>device_id</em>,
-    <em>connected_object_uid</em>,
+    <em>device_uid</em>,
+    connected_object_uid,
     user_id,
     type,
     label
@@ -97,14 +104,49 @@ pg.devices(
       `,
     },
     {
-      title: `Quand on y pense c'est assez logique`,
+      title: `Limitations`,
       content: md`
-extraire les entrées sorties + extraire les considérations techniques
-= isolation totale du métier
-
-J'ai mon code et j'essaie de faire le process inverse
+- Isoler le technique et le métier demande de la réflexion
+- Faire des cas d'usage purs peut être compliqué
+- Peut affecter la performance
+- Lourdement couplé à pyspark.
       `,
     },
+    {
+      title: `Conclusion`,
+      content: md`
+- TDD: tester c'est garantir
+- Clean-Archi: facilite l'interaction avec les entrées sorties
+- pyspark: transverse à l'application
+      `,
+    },
+{
+  title: "Merci pour votre attention", 
+  content:(_o, $holder) => {
+    const _md = md`
+### Fati CHEN
+
+[LinkedIn](https://www.linkedin.com/in/fati-chen/) | <small>📚[github.com/stardisblue](https://github.com/stardisblue)</small>
+
+<div id="mybanner"></div>
+    `;
+
+    $holder.append(_md); 
+  },
+  footer: html`<div
+      class="flex-grow-1"
+      style="display:flex; justify-content: space-around"
+    >
+      ${logos.map(
+        ({ url, ...attrs }) => html`<a
+          href=${url}
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="br3" height="256px" style="width:auto;" ${attrs} />
+        </a> `
+      )}
+    </div>`
+}
   ]);
 })();
 

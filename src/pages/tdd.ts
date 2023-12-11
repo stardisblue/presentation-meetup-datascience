@@ -7,7 +7,7 @@ export const tdd = {
     $holder.classList.add('flex', 'justify-center');
     $holder.append(
       html.fragment`
-            <figure class="w-100 flex flex-column justify-between">
+            <figure class="w-60 flex flex-column justify-between">
               <img src="${tddImage}" />
               <figcaption class="gray f4">
                 <a

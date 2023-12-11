@@ -6,8 +6,8 @@ export const cleanArchi = [
     title: `Clean Archi 101`,
     content: (_o, holder) => {
       holder.classList.add('flex', 'justify-around', 'items-center');
-      holder.append(html.fragment`<figure>
-        <img src=${cleanArchiUrl} />
+      holder.append(html.fragment`<figure class="w-50">
+        <img class="w-100" src=${cleanArchiUrl} />
         <figcaption class="f4">
           <a href="https://alistair.cockburn.us/hexagonal-architecture/"
             >Alistair Cockburn</a
