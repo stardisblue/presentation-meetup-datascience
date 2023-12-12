@@ -1,0 +1,44 @@
+{
+	// Place your demo workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	"Create core function":{
+		"scope": "python",
+		"prefix": "get_measures_of_date_for_devices",
+		"body": [
+			"from pyspark.sql.functions import col",
+			"",
+			"from demo.services.reader import Reader",
+			"",
+			"",
+			"def get_measures_of_date_for_devices(",
+			"    datestamp: str, device_reader: Reader, measures_reader: Reader",
+			"):",
+			"    df_measure = measures_reader().filter(col(\"timestamp\").cast(\"date\") == datestamp)",
+			"",
+			"    return device_reader().join(df_measure, on=[\"site_id\", \"connected_object_uid\"])",
+			"",
+		],
+		"description": "Create get_measures_of_date_for_devices"
+	},
+	"Create writer interface":{
+		"scope": "python",
+		"prefix": "writer",
+		"body": [
+			"from abc import ABC, abstractmethod",
+			"",
+			"from pyspark.sql import DataFrame",
+			"",
+			"",
+			"class Writer(ABC):",
+			"    @abstractmethod",
+			"    def __call__(self, df: DataFrame) -> None:",
+			"        ...",
+			"",
+		],
+		"description": "Create writer interface"
+	}
+}

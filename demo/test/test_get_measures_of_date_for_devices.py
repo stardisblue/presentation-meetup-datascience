@@ -9,11 +9,10 @@ def test_get_measures_of_date(spark):
     devices = LocalParquetReader(spark, "data/devices.parquet")
     measures = LocalParquetReader(spark, "data/measures.parquet")
 
-    device_measures = InMemoryWriter()
-
     assert devices().count() == 3
     assert measures().count() == 144
 
+    device_measures = InMemoryWriter()
     device_measures(get_measures_of_date_for_devices(datestamp, devices, measures))
 
     validation = spark.read.parquet("data/validation.parquet")
