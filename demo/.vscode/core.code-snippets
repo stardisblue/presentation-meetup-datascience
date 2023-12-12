@@ -24,21 +24,4 @@
 		],
 		"description": "Create get_measures_of_date_for_devices"
 	},
-	"Create writer interface":{
-		"scope": "python",
-		"prefix": "writer",
-		"body": [
-			"from abc import ABC, abstractmethod",
-			"",
-			"from pyspark.sql import DataFrame",
-			"",
-			"",
-			"class Writer(ABC):",
-			"    @abstractmethod",
-			"    def __call__(self, df: DataFrame) -> None:",
-			"        ...",
-			"",
-		],
-		"description": "Create writer interface"
-	}
 }

@@ -58,7 +58,7 @@
 	},
 	"PostgresReader __init__":{
 		"scope": "python",
-		"prefix": "postgresqlreader:init",
+		"prefix": "postgresql-reader:init",
 		"body": [
 			"def __init__(self, client: PostgresClient, table: str):",
 			"    super().__init__()",
@@ -80,7 +80,7 @@
 	},
 	"CassandraReader __init__":{
 		"scope": "python",
-		"prefix": "cassandrareader:init",
+		"prefix": "cassandra-reader:init",
 		"body": [
 			"def __init__(self, client: CassandraClient, table: str):",
 			"    super().__init__()",
@@ -92,7 +92,7 @@
 	},
 	"CassandraReader __call__":{
 		"scope": "python",
-		"prefix": "cassandrareader:call",
+		"prefix": "cassandra-reader:call",
 		"body": [
 			"def __call__(self) -> DataFrame:",
 			"    return self.client.read(self._table)",
@@ -102,7 +102,7 @@
 	},
 	"LocalParquetReader __init__":{
 		"scope": "python",
-		"prefix": "localparquetreader:init",
+		"prefix": "local-parquet-reader:init",
 		"body": [
 			"def __init__(self, spark: SparkSession, path: str) -> None:",
 			"    super().__init__()",
@@ -114,7 +114,7 @@
 	},
 	"LocalParquetReader __call__":{
 		"scope": "python",
-		"prefix": "localparquetreader:call",
+		"prefix": "local-parquet-reader:call",
 		"body": [
 			"def __call__(self) -> DataFrame:",
 			"    return self._spark.read.parquet(self._path)",
@@ -124,7 +124,7 @@
 	},
 	"InMemoryWriter __init__":{
 		"scope": "python",
-		"prefix": "inmemorywriter:init",
+		"prefix": "in-memory-writer:init",
 		"body": [
 
 			"def __init__(self) -> None:",
@@ -141,7 +141,7 @@
 	},
 	"InMemoryWriter __call__":{
 		"scope": "python",
-		"prefix": "inmemorywriter:call",
+		"prefix": "in-memory-writer:call",
 		"body": [
 			"def __call__(self, df: DataFrame) -> None:",
 			"    self._dataframe = df",

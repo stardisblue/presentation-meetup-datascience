@@ -110,7 +110,7 @@
 	},
 	"assertEqualDataframes": {
 		"scope": "python",
-		"prefix": "instance:cassandra_measures",
+		"prefix": "assertDataFrameEqual",
 		"body": [
 			"assertDataFrameEqual(device_measures.dataframe, validation, order=[\"device_uid\", \"timestamp\"])",
 			""
