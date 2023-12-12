@@ -1,0 +1,152 @@
+{
+	// Place your demo workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Cassandra client":{
+		"scope": "python",
+		"prefix": "client:cassandra",
+		"body": [
+			"class CassandraClient:",
+			"    def __init__(self, session: SparkSession, keyspace: str) -> None:",
+			"        assert isinstance(session, SparkSession)",
+			"",
+			"        self.session = session",
+			"        self.keyspace = keyspace",
+			"",
+			"    def read(self, table: str):",
+			"        return self.session.read.options(directJoinSetting=\"on\").table(",
+			"            f\"{self.keyspace}.{table}\"",
+			"        )",
+			""
+		],
+		"description": "Create cassandra client"
+	},
+	"Postgres client":{
+		"scope": "python",
+		"prefix": "client:postgresql",
+		"body": [
+			"class PostgresClient:",
+			"    def __init__(",
+			"        self, session: SparkSession, url: str, user: str, password: str",
+			"    ) -> None:",
+			"        self.session = session",
+			"        self.connection = dict(",
+			"            driver=\"org.postgresql.Driver\",",
+			"            url=url,",
+			"            user=user,",
+			"            password=password,",
+			"        )",
+			"",
+			"    def read(self, dbtable: str):",
+			"        return self.session.read.format(\"jdbc\").load(dbtable=dbtable, **self.connection)",
+			""
+		],
+		"description": "Create Postgres client"
+	},
+	"PostgresReader __init__":{
+		"scope": "python",
+		"prefix": "postgresqlreader:init",
+		"body": [
+			"def __init__(self, client: PostgresClient, table: str):",
+			"    super().__init__()",
+			"    self.client = client",
+			"    self._table = table",
+			""
+		],
+		"description": "Create PostgresReader init"
+	},
+	"PostgresReader __call__":{
+		"scope": "python",
+		"prefix": "postgresqlreader:call",
+		"body": [
+			"def __call__(self) -> DataFrame -> DataFrame:",
+			"    return self.client.read(self._table)",
+			""
+		],
+		"description": "Create PostgresReader call"
+	},
+	"CassandraReader __init__":{
+		"scope": "python",
+		"prefix": "cassandrareader:init",
+		"body": [
+			"def __init__(self, client: CassandraClient, table: str):",
+			"    super().__init__()",
+			"    self.client = client",
+			"    self._table = table",
+			""
+		],
+		"description": "Create CassandraReader init"
+	},
+	"CassandraReader __call__":{
+		"scope": "python",
+		"prefix": "cassandrareader:call",
+		"body": [
+			"def __call__(self) -> DataFrame:",
+			"    return self.client.read(self._table)",
+			""
+		],
+		"description": "Create CassandraReader call"
+	},
+	"LocalParquetReader __init__":{
+		"scope": "python",
+		"prefix": "localparquetreader:init",
+		"body": [
+			"def __init__(self, spark: SparkSession, path: str) -> None:",
+			"    super().__init__()",
+			"    self._spark = spark",
+			"    self._path = path",
+			""
+		],
+		"description": "Create LocalParquetReader init"
+	},
+	"LocalParquetReader __call__":{
+		"scope": "python",
+		"prefix": "localparquetreader:call",
+		"body": [
+			"def __call__(self) -> DataFrame:",
+			"    return self._spark.read.parquet(self._path)",
+			""
+		],
+		"description": "Create LocalParquetReader call"
+	},
+	"InMemoryWriter __init__":{
+		"scope": "python",
+		"prefix": "inmemorywriter:init",
+		"body": [
+
+			"def __init__(self) -> None:",
+			"	super().__init__()",
+			"	self._dataframe = None",
+			"",
+			"@property",
+			"def dataframe(self):",
+			"	assert self._dataframe is not None",
+			"	return self._dataframe",
+			""
+		],
+		"description": "Create InMemoryWriter init"
+	},
+	"InMemoryWriter __call__":{
+		"scope": "python",
+		"prefix": "inmemorywriter:call",
+		"body": [
+			"def __call__(self, df: DataFrame) -> None:",
+			"    self._dataframe = df",
+			""
+		],
+		"description": "Create InMemoryWriter call"
+	}
+}
