@@ -1,7 +1,7 @@
-import { html, md } from 'presenter';
+import { PageData, PageState, html, md } from 'presenter';
 import apacheSparkUrl from '../apache-spark.png';
 
-export const pyspark = {
+export const pyspark: PageState<PageData> = {
   title: `Apache Spark et pyspark`,
   content: (_o, holder) => {
     holder.classList.add('flex', 'flex-wrap');

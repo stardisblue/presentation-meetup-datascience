@@ -1,6 +1,6 @@
-import { md, html } from 'presenter';
+import { md, html, PageData, PageState } from 'presenter';
 
-export const title = {
+export const title: PageState<PageData>[] = [{
   template: 'title',
   title: `Introduction au TDD et au principe de clean-archi avec Pyspark`,
   content: md`
@@ -14,8 +14,8 @@ Fati Chen <small>🔗[LinkedIn](https://www.linkedin.com/in/fati-chen/) | 📚[g
 
 _12 déc. 2023_
   `,
-};
-export const titlebold = {
+},
+{
   template: 'title',
   title: () => html.fragment`
     <span style="opacity:0.5">Introduction au </span>TDD<span
@@ -39,4 +39,5 @@ Fati Chen <small>🔗[LinkedIn](https://www.linkedin.com/in/fati-chen/) | 📚[g
 
 _12 déc. 2023_
   `,
-};
+}
+]; 

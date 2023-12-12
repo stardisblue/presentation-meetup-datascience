@@ -1,7 +1,7 @@
-import { html, md } from 'presenter';
+import { PageData, PageState, html, md } from 'presenter';
 import tddImage from '../tdd.png';
 import exemplesVideo from '../castello-oui-exemples.mp4';
-export const tdd = {
+export const tdd: PageState<PageData> = {
   title: `Le principe du TDD`,
   content: (_o, $holder) => {
     $holder.classList.add('flex', 'justify-center');
@@ -30,7 +30,7 @@ export const tdd = {
   },
 };
 
-export const tddExamples = [
+export const tddExamples: PageState<PageData>[] = [
   {
     title: `La pratique du TDD, l'addition svp`,
     content: html`<figure class="flex flex-column items-center">

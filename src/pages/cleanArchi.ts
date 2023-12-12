@@ -1,7 +1,7 @@
-import { html, md } from 'presenter';
+import { PageData, PageState, html, md } from 'presenter';
 import cleanArchiUrl from '../hexagon.gif';
 
-export const cleanArchi = [
+export const cleanArchi: PageState<PageData>[] = [
   {
     title: `Clean Archi 101`,
     content: (_o, holder) => {

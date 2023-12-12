@@ -1,7 +1,7 @@
-import { html, md } from 'presenter';
+import { PageData, PageState, html, md } from 'presenter';
 import comwattUrl from '../comwatt-pub-1.webp';
 
-export const comwatt = {
+export const comwatt: PageState<PageData> = {
   title: `Comwatt`,
   content: (_o, holder) => {
     holder.classList.add('flex', 'flex-wrap');

@@ -3,7 +3,7 @@ import 'tachyons/css/tachyons.css';
 import 'presenter/dist/index.css';
 import './css/style.css';
 import { create, html, md } from 'presenter';
-import { title, titlebold } from './pages/title';
+import { title } from './pages/title';
 import { tdd, tddExamples } from './pages/tdd';
 import { cleanArchi } from './pages/cleanArchi';
 import { pyspark } from './pages/pyspark';
@@ -24,8 +24,7 @@ const logos = [
 (function () {
   const $entry = document.querySelector<HTMLElement>('#hero')!;
   create($entry, [
-    title,
-    titlebold,
+    ...title,
     tdd,
     ...tddExamples,
     ...cleanArchi,
