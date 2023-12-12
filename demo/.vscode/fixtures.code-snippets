@@ -17,7 +17,7 @@
 	// }
 	"Define pyspark fixture": {
 		"scope": "python",
-		"prefix": "f:pyspark",
+		"prefix": "fixture:pyspark",
 		"body": [
 			"@pytest.fixture(scope=\"session\")",
 			"def spark():",
@@ -36,7 +36,7 @@
 	},
 	"Define pyspark fixture with cassandra": {
 		"scope": "python",
-		"prefix": "f:pyspark-full",
+		"prefix": "fixture:pyspark-full",
 		"body": [
 			"@pytest.fixture(scope=\"session\")",
 			"def spark():",

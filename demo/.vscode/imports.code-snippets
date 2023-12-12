@@ -7,7 +7,7 @@
 	// Placeholders with the same ids are connected.
 	"Import SparkSession":{
 		"scope": "python",
-		"prefix": "i:sparksession",
+		"prefix": "import:sparksession",
 		"body": [
 			"from pyspark.sql import SparkSession",
 			""
@@ -16,7 +16,7 @@
 	},
 	"Import pyspark.sql+":{
 		"scope": "python",
-		"prefix": "i:pyspark",
+		"prefix": "import:pyspark",
 		"body": [
 			"from pyspark.sql import SparkSession, DataFrame",
 			""
