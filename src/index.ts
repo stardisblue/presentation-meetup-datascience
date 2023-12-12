@@ -125,8 +125,8 @@ pg.devices(
     {
       title: `Conclusion`,
       content: md`
-- TDD: tester c'est garantir
-- Clean-Archi: facilite l'interaction avec les entrées sorties
+- TDD: tester avant de coder
+- Clean-Archi: ajoute de la robustesse au niveau applicatif
 - pyspark: transverse à l'application
       `,
     },
@@ -139,7 +139,7 @@ pg.devices(
           if (name === 'viewof banner') return new Inspector(banner);
         });
 
-        main.redefine('w', $holder.getBoundingClientRect());
+        main.redefine('w', $holder.getBoundingClientRect().width);
 
         $holder.append(
           md`

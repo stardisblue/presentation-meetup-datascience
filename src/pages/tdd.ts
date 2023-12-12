@@ -19,6 +19,7 @@ export const tdd: PageState<PageData> = {
           `,
       html`<div class="pa1"></div>`,
       html`<div class="w-100">
+        <strong>Test Driven Development</strong>
         <p>Vision pragmatique de la programmation</p>
         <ol>
           <li>Créer le test avant code</li>
