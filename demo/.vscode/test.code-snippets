@@ -62,22 +62,60 @@
 		],
 		"description": "Defines full pyspark fixture"
 	},
-	"Import SparkSession":{
+	"device parquet instance": {
 		"scope": "python",
-		"prefix": "i:spark-session",
+		"prefix": "instance:parquet_devices",
 		"body": [
-			"from pyspark.sql import SparkSession",
+			"devices = LocalParquetReader(spark, \"data/devices.parquet\")",
 			""
 		],
-		"description": "Create Postgres client"
+		"description": "Setup devices local parquet reader"
 	},
-	"Import pyspark.sql+":{
+	"measures parquet instance": {
 		"scope": "python",
-		"prefix": "i:pyspark",
+		"prefix": "instance:parquet_measures",
 		"body": [
-			"from pyspark.sql import SparkSession, DataFrame",
+			"measures = LocalParquetReader(spark, \"data/measures.parquet\")",
 			""
 		],
-		"description": "Create Postgres client"
-	}
+		"description": "Setup measures local parquet reader"
+	},
+	"device postgresql instance": {
+		"scope": "python",
+		"prefix": "instance:postgres_devices",
+		"body": [
+			"device_reader = PostgresReader(",
+			"    PostgresClient(",
+			"        spark,",
+			"        \"jdbc:postgresql://localhost:5432/comwatt\",",
+			"        \"postgres\",",
+			"        \"demo_password\",",
+			"    ),",
+			"    \"devices\",",
+			")",
+			""
+		],
+		"description": "Setup devices postgres client reader"
+	},
+	"measures parquet instance": {
+		"scope": "python",
+		"prefix": "instance:cassandra_measures",
+		"body": [
+			"measures_reader = CassandraReader(",
+			"    CassandraClient(spark, \"comwatt.comwatt\"), \"measures\"",
+			")",
+			""
+		],
+		"description": "Setup measures cassandra reader"
+	},
+	"assertEqualDataframes": {
+		"scope": "python",
+		"prefix": "instance:cassandra_measures",
+		"body": [
+			"assertDataFrameEqual(device_measures.dataframe, validation, order=[\"device_uid\", \"timestamp\"])",
+			""
+		],
+		"description": "assertEqualDataframes"
+	},
+
 }
