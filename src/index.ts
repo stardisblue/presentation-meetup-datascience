@@ -14,6 +14,12 @@ import bigdataUrl from './bigdata.webp';
 import flintUrl from './flint_company_logo.jpg';
 import slbUrl from './slbdigital_logo.jpg';
 
+import {
+  Runtime,
+  Inspector,
+} from 'https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js';
+import define from 'https://api.observablehq.com/d/302a7a340686465f.js?v=4';
+
 const logos = [
   {
     src: bigdataUrl,
@@ -111,9 +117,9 @@ pg.devices(
 - Isoler le technique et le métier demande de la réflexion
 - Faire des cas d'usage purs peut être compliqué
 - Peut affecter la performance
+- Lourdement couplé à pyspark
 - Ne remplace pas les test e2e
 - Ne remplace pas les test d'integration
-- Lourdement couplé à pyspark
       `,
     },
     {
@@ -127,15 +133,25 @@ pg.devices(
     {
       title: 'Merci pour votre attention',
       content: (_o, $holder) => {
-        const _md = md`
+        const banner = html`<div></div>`;
+
+        const main = new Runtime().module(define, (name: any) => {
+          if (name === 'viewof banner') return new Inspector(banner);
+        });
+
+        main.redefine('w', $holder.getBoundingClientRect());
+
+        $holder.append(
+          md`
+> Introduction au TDD et au principe de clean-archi avec Pyspark
+          `,
+          banner,
+          md`
 ### Fati CHEN
 
 [LinkedIn](https://www.linkedin.com/in/fati-chen/) | <small>📚[github.com/stardisblue](https://github.com/stardisblue)</small>
-
-<div id="mybanner"></div>
-        `;
-
-        $holder.append(_md);
+          `
+        );
       },
       footer: html`<div
         class="flex-grow-1"
